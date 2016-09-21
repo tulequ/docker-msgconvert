@@ -9,4 +9,8 @@ RUN apk --no-cache add wget make gcc perl-dev musl-dev && \
     cpanm Email::Outlook::Message && \
     apk del -r wget make gcc perl-dev musl-dev
 
-CMD ["msgconvert"]
+VOLUME /mails
+
+WORKDIR /mails
+
+ENTRYPOINT ["msgconvert"]
