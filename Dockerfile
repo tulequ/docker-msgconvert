@@ -1,7 +1,5 @@
 FROM alpine:3.4
 
-ENV EMAIL_OUTLOOK_VER 0.918
-
 RUN apk --no-cache add perl
 
 RUN apk --no-cache add wget make gcc perl-dev musl-dev && \
